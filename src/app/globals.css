@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+:root {
+  --background: #FFF9F2;
+  --foreground: #3D405B;
+
+  --peach: #FFD7BA;
+  --peach-strong: #FFB088;
+  --mint: #B5EAD7;
+  --mint-strong: #7FD1AE;
+  --sky: #A0E7E5;
+  --sky-strong: #6FCFCC;
+  --butter: #FFF1A8;
+  --butter-strong: #FFDE59;
+  --lavender: #E0BBE4;
+  --rose: #FFC6D9;
+
+  --surface: #FFFFFF;
+  --surface-muted: #FFF3E4;
+  --border: #F2E1CB;
+  --text-muted: #7A7A8C;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-border-soft: var(--border);
+  --color-muted: var(--text-muted);
+
+  --color-peach: var(--peach);
+  --color-peach-strong: var(--peach-strong);
+  --color-mint: var(--mint);
+  --color-mint-strong: var(--mint-strong);
+  --color-sky: var(--sky);
+  --color-sky-strong: var(--sky-strong);
+  --color-butter: var(--butter);
+  --color-butter-strong: var(--butter-strong);
+  --color-lavender: var(--lavender);
+  --color-rose: var(--rose);
+
+  --font-sans: var(--font-pretendard), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-gaegu), var(--font-pretendard), cursive;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+.bg-grid-soft {
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(61, 64, 91, 0.08) 1px, transparent 0);
+  background-size: 24px 24px;
+}
