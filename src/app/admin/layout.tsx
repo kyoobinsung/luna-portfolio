@@ -1,8 +1,10 @@
 import Link from "next/link";
+import { DevLabel } from "@/components/ui/DevLabel";
 
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="min-h-screen bg-surface-muted">
+    <div className="relative min-h-screen bg-surface-muted">
+      <DevLabel name="AdminLayout" file="app/admin/layout.tsx" depth={1} />
       {/* 어드민 상단 바 */}
       <header className="sticky top-0 z-40 border-b border-border-soft bg-surface/80 backdrop-blur-md">
         <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-3">

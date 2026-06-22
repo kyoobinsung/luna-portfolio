@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { X, Trash2 } from "lucide-react";
 import type { CalendarEvent, EventColor } from "@/types/calendar";
+import { DevLabel } from "@/components/ui/DevLabel";
 
 const COLORS: { value: EventColor; bg: string; label: string }[] = [
   { value: "peach", bg: "bg-peach", label: "복숭아" },
@@ -55,8 +56,9 @@ export function EventModal({ isOpen, initialDate, editing, onClose, onSave, onDe
       <form
         onSubmit={handleSubmit}
         onClick={(e) => e.stopPropagation()}
-        className="w-full max-w-md rounded-3xl bg-surface p-6 shadow-2xl"
+        className="relative w-full max-w-md rounded-3xl bg-surface p-6 shadow-2xl"
       >
+        <DevLabel name="EventModal" file="components/calendar/EventModal.tsx" depth={2} />
         <div className="mb-4 flex items-center justify-between">
           <h3 className="text-xl font-bold">{editing ? "일정 수정 ✏️" : "새 일정 추가 ✨"}</h3>
           <button

@@ -1,10 +1,12 @@
 import { Mail } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "@/components/ui/BrandIcons";
 import { profile } from "@/data/profile";
+import { DevLabel } from "@/components/ui/DevLabel";
 
 export function Footer() {
   return (
-    <footer className="border-t border-border-soft bg-surface-muted">
+    <footer className="relative border-t border-border-soft bg-surface-muted">
+      <DevLabel name="Footer" file="components/Footer.tsx" depth={1} />
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-4 py-10 text-center sm:flex-row sm:justify-between sm:text-left">
         <div>
           <p className="text-sm font-semibold">🌙 {profile.name}의 포트폴리오</p>

@@ -1,10 +1,12 @@
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { profile } from "@/data/profile";
 import { MapPin } from "lucide-react";
+import { DevLabel } from "@/components/ui/DevLabel";
 
 export function About() {
   return (
-    <section id="about" className="mx-auto max-w-6xl px-4 py-20 sm:py-24">
+    <section id="about" className="relative mx-auto max-w-6xl px-4 py-20 sm:py-24">
+      <DevLabel name="About" file="components/sections/About.tsx" depth={1} />
       <div className="grid items-center gap-12 md:grid-cols-[280px_1fr]">
         <div className="mx-auto flex h-56 w-56 items-center justify-center rounded-full bg-gradient-to-br from-peach via-rose to-lavender text-7xl shadow-lg md:mx-0 md:h-64 md:w-64">
           🌙

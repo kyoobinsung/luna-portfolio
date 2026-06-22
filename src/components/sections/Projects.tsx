@@ -2,6 +2,7 @@ import { SectionHeader } from "@/components/ui/SectionHeader";
 import { projects, type Project } from "@/data/projects";
 import { ExternalLink } from "lucide-react";
 import { GithubIcon } from "@/components/ui/BrandIcons";
+import { DevLabel } from "@/components/ui/DevLabel";
 
 const accentBg: Record<Project["accent"], string> = {
   peach: "bg-peach/60",
@@ -14,7 +15,8 @@ const accentBg: Record<Project["accent"], string> = {
 
 export function Projects() {
   return (
-    <section id="projects" className="mx-auto max-w-6xl px-4 py-20 sm:py-24">
+    <section id="projects" className="relative mx-auto max-w-6xl px-4 py-20 sm:py-24">
+      <DevLabel name="Projects" file="components/sections/Projects.tsx" depth={1} />
       <SectionHeader
         eyebrow="Projects"
         title="만들어 본 것들"

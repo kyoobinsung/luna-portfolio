@@ -2,6 +2,7 @@
 
 import { useActionState } from "react";
 import type { Experience } from "@/db/schema";
+import { DevLabel } from "@/components/ui/DevLabel";
 
 type ActionState = { error: string } | null;
 type Action = (prev: ActionState, formData: FormData) => Promise<ActionState>;
@@ -22,7 +23,8 @@ export function ExperienceForm({ action, defaultValues, submitLabel }: Props) {
   const [state, formAction, isPending] = useActionState(action, null);
 
   return (
-    <form action={formAction} className="space-y-5">
+    <form action={formAction} className="relative space-y-5">
+      <DevLabel name="ExperienceForm" file="app/admin/experiences/ExperienceForm.tsx" depth={2} />
       {/* hidden id (수정 시) */}
       {defaultValues?.id && (
         <input type="hidden" name="id" value={defaultValues.id} />

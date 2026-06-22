@@ -2,6 +2,7 @@ import { SectionHeader } from "@/components/ui/SectionHeader";
 import { profile } from "@/data/profile";
 import { Mail, ArrowUpRight } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "@/components/ui/BrandIcons";
+import { DevLabel } from "@/components/ui/DevLabel";
 
 type Channel = {
   icon: (props: { size?: number }) => React.ReactElement;
@@ -37,7 +38,8 @@ export function Contact() {
   ];
 
   return (
-    <section id="contact" className="mx-auto max-w-6xl px-4 py-20 sm:py-24">
+    <section id="contact" className="relative mx-auto max-w-6xl px-4 py-20 sm:py-24">
+      <DevLabel name="Contact" file="components/sections/Contact.tsx" depth={1} />
       <SectionHeader
         eyebrow="Contact"
         title="이야기 나눠요"

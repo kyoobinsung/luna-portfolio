@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Sparkles, ArrowRight } from "lucide-react";
 import { profile } from "@/data/profile";
+import { DevLabel } from "@/components/ui/DevLabel";
 
 export function Hero() {
   return (
@@ -8,6 +9,7 @@ export function Hero() {
       id="hero"
       className="relative overflow-hidden bg-gradient-to-b from-peach/40 via-butter/30 to-background"
     >
+      <DevLabel name="Hero" file="components/sections/Hero.tsx" depth={1} />
       <div className="bg-grid-soft absolute inset-0 opacity-40" aria-hidden />
       <div className="relative mx-auto flex max-w-6xl flex-col items-center gap-6 px-4 py-24 text-center sm:py-32">
         <span className="inline-flex items-center gap-2 rounded-full bg-surface px-4 py-2 text-xs font-semibold shadow-sm">

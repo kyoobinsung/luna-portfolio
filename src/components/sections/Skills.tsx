@@ -1,11 +1,13 @@
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { skillGroups } from "@/data/skills";
+import { DevLabel } from "@/components/ui/DevLabel";
 
 const cardAccents = ["bg-peach/50", "bg-mint/50", "bg-sky/50", "bg-butter/50"];
 
 export function Skills() {
   return (
-    <section id="skills" className="bg-surface-muted">
+    <section id="skills" className="relative bg-surface-muted">
+      <DevLabel name="Skills" file="components/sections/Skills.tsx" depth={1} />
       <div className="mx-auto max-w-6xl px-4 py-20 sm:py-24">
         <SectionHeader
           eyebrow="Skills"

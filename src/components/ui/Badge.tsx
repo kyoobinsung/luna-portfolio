@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { DevLabel } from "@/components/ui/DevLabel";
 
 type Variant = "peach" | "mint" | "sky" | "butter" | "lavender" | "rose";
 
@@ -20,9 +21,11 @@ type Props = {
 export function Badge({ children, variant = "peach", className = "" }: Props) {
   return (
     <span
-      className={`inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold ${variantClass[variant]} ${className}`}
+      className={`relative inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold ${variantClass[variant]} ${className}`}
     >
+      <DevLabel name="Badge" file="components/ui/Badge.tsx" depth={3} />
       {children}
     </span>
   );
 }
+

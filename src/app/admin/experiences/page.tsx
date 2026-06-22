@@ -4,6 +4,7 @@ import { experiences } from "@/db/schema";
 import { asc } from "drizzle-orm";
 import { Briefcase, GraduationCap, Star, Plus, Pencil } from "lucide-react";
 import { DeleteButton } from "./DeleteButton";
+import { DevLabel } from "@/components/ui/DevLabel";
 
 type ExperienceType = "work" | "education" | "activity";
 
@@ -23,7 +24,8 @@ export default async function AdminExperiencesPage() {
   const items = await db.select().from(experiences).orderBy(asc(experiences.sortOrder));
 
   return (
-    <div>
+    <div className="relative">
+      <DevLabel name="AdminExperiencesPage" file="app/admin/experiences/page.tsx" depth={1} />
       {/* 헤더 */}
       <div className="mb-8 flex items-center justify-between">
         <div>

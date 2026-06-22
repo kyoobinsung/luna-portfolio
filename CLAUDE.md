@@ -135,3 +135,36 @@ npm run db:generate  # 마이그레이션 파일 생성
 npm run db:migrate   # 마이그레이션 실행 (프로덕션용)
 npm run db:studio    # Drizzle Studio GUI 실행
 ```
+
+## DevLabel Convention
+
+모든 리액트 컴포넌트에는 개발 모드에서 컴포넌트 식별을 위한 `DevLabel`을 반드시 포함합니다. `DevLabel`은 `process.env.NODE_ENV === 'development'`일 때만 렌더링되며, 프로덕션에서는 완전히 제거됩니다.
+
+### 사용법
+
+```tsx
+import { DevLabel } from "@/components/ui/DevLabel";
+
+// 컴포넌트의 루트 요소 안에 배치 (루트 요소에 `relative` 클래스 필요)
+<div className="relative ...">
+  <DevLabel name="MyComponent" file="components/MyComponent.tsx" depth={1} />
+  {/* ... */}
+</div>
+```
+
+### depth 기준
+
+| depth | 계층 | 색상 | 위치 | 예시 |
+|---|---|---|---|---|
+| `1` | 섹션 / 페이지 | 파란색 | top-left | `Hero`, `Nav`, `Footer`, 페이지 컴포넌트 |
+| `2` | 컴포넌트 | 보라색 | top-right | `SectionHeader`, `EventModal`, `ExperienceForm` |
+| `3` | 하위 영역 / 소형 | 주황색 | bottom-left | `Badge`, `DeleteButton`, `BrandIcons` |
+
+### 규칙
+
+1. **새 컴포넌트 작성 시** 반드시 `DevLabel`을 포함할 것
+2. `file` prop에는 `src/` 이후의 상대 경로 사용 (예: `components/sections/Hero.tsx`)
+3. `name` prop에는 컴포넌트 함수명 사용 (예: `Hero`, `SectionHeader`)
+4. 루트 요소에 `relative` 클래스가 없으면 추가할 것
+5. 클릭 시 `"파일명 - 컴포넌트명"` 형태로 클립보드에 복사됨
+

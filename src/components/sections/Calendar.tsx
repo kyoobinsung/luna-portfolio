@@ -19,9 +19,11 @@ import { ChevronLeft, ChevronRight, Plus } from "lucide-react";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { EventModal } from "@/components/calendar/EventModal";
 import { generateEventId, loadEvents, saveEvents } from "@/lib/calendar-storage";
+import { DevLabel } from "@/components/ui/DevLabel";
 import type { CalendarEvent, EventColor } from "@/types/calendar";
 
 const WEEK_LABELS = ["일", "월", "화", "수", "목", "금", "토"];
+
 
 const dotColor: Record<EventColor, string> = {
   peach: "bg-peach-strong",
@@ -115,7 +117,8 @@ export function Calendar() {
   };
 
   return (
-    <section id="calendar" className="mx-auto max-w-6xl px-4 py-20 sm:py-24">
+    <section id="calendar" className="relative mx-auto max-w-6xl px-4 py-20 sm:py-24">
+      <DevLabel name="Calendar" file="components/sections/Calendar.tsx" depth={1} />
       <SectionHeader
         eyebrow="Calendar"
         title="나의 일정 ✏️"

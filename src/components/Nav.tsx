@@ -4,12 +4,14 @@ import Link from "next/link";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { navItems } from "@/data/nav";
+import { DevLabel } from "@/components/ui/DevLabel";
 
 export function Nav() {
   const [open, setOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-40 w-full border-b border-border-soft bg-background/80 backdrop-blur">
+      <DevLabel name="Nav" file="components/Nav.tsx" depth={1} />
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
         <Link href="#hero" className="flex items-center gap-2 text-lg font-bold">
           <span aria-hidden>🌙</span>

@@ -6,6 +6,7 @@ import { ExperienceForm } from "../../ExperienceForm";
 import { updateExperience } from "../../actions";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
+import { DevLabel } from "@/components/ui/DevLabel";
 
 type Props = {
   params: Promise<{ id: string }>;
@@ -21,7 +22,8 @@ export default async function EditExperiencePage({ params }: Props) {
   if (!item) notFound();
 
   return (
-    <div className="mx-auto max-w-xl">
+    <div className="relative mx-auto max-w-xl">
+      <DevLabel name="EditExperiencePage" file="app/admin/experiences/[id]/edit/page.tsx" depth={1} />
       <Link
         href="/admin/experiences"
         className="mb-6 inline-flex items-center gap-1.5 text-sm text-muted transition-colors hover:text-foreground"

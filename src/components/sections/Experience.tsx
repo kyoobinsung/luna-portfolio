@@ -4,6 +4,7 @@ import { experiences } from "@/db/schema";
 import { asc } from "drizzle-orm";
 import { Briefcase, GraduationCap, Star, Plus } from "lucide-react";
 import Link from "next/link";
+import { DevLabel } from "@/components/ui/DevLabel";
 
 type ExperienceType = "work" | "education" | "activity";
 
@@ -32,7 +33,8 @@ export async function Experience() {
     .orderBy(asc(experiences.sortOrder));
 
   return (
-    <section id="experience" className="bg-surface-muted">
+    <section id="experience" className="relative bg-surface-muted">
+      <DevLabel name="Experience" file="components/sections/Experience.tsx" depth={1} />
       <div className="mx-auto max-w-6xl px-4 py-20 sm:py-24">
         {/* 헤더 + 추가 버튼 */}
         <div className="flex items-start justify-between gap-4">
