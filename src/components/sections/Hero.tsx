@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Sparkles, ArrowRight } from "lucide-react";
 import { profile } from "@/data/profile";
 import { DevLabel } from "@/components/ui/DevLabel";
+import { LottieBackground } from "@/components/ui/LottieBackground";
 
 export function Hero() {
   return (
@@ -11,6 +12,12 @@ export function Hero() {
     >
       <DevLabel name="Hero" file="components/sections/Hero.tsx" depth={1} />
       <div className="bg-grid-soft absolute inset-0 opacity-40" aria-hidden />
+      <div
+        className="pointer-events-none absolute inset-0 flex items-center justify-center opacity-60 [&>dotlottie-wc]:h-full [&>dotlottie-wc]:w-full [&>dotlottie-wc]:max-w-[min(1100px,100%)]"
+        aria-hidden
+      >
+        <LottieBackground src="https://lottie.host/b72948f4-49f5-4f89-bfb1-45591b7cde8d/aHUq24EPtr.lottie" />
+      </div>
       <div className="relative mx-auto flex max-w-6xl flex-col items-center gap-6 px-4 py-24 text-center sm:py-32">
         <span className="inline-flex items-center gap-2 rounded-full bg-surface px-4 py-2 text-xs font-semibold shadow-sm">
           <Sparkles size={14} className="text-peach-strong" />
