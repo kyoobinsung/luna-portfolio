@@ -6,6 +6,8 @@ import { Experience } from "@/components/sections/Experience";
 import { Calendar } from "@/components/sections/Calendar";
 import { Contact } from "@/components/sections/Contact";
 
+export const dynamic = "force-dynamic";
+
 export default function Home() {
   return (
     <>
